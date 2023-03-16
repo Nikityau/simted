@@ -1,0 +1,73 @@
+const path = require('path')
+const MiniCssExtract = require("mini-css-extract-plugin");
+
+module.exports = [
+    // Add support for native node modules
+    {
+        // We're specifying native_modules in the test because the asset relocator loader generates a
+        // "fake" .node file which is really a cjs file.
+        test: /native_modules[/\\].+\.node$/,
+        use: 'node-loader',
+    },
+    {
+        test: /[/\\]node_modules[/\\].+\.(m?js|node)$/,
+        parser: {amd: false},
+        use: {
+            loader: '@vercel/webpack-asset-relocator-loader',
+            options: {
+                outputAssetBase: 'native_modules',
+            },
+        },
+    },
+    {
+        test: /\.css$/,
+        use: [
+            {
+                loader: 'style-loader'
+            },
+            {
+                loader: 'css-loader'
+            }
+        ],
+    },
+    {
+        test: /\.scss$/,
+        use: [
+            {
+                loader: MiniCssExtract.loader
+            },
+            {
+                loader: 'css-loader'
+            },
+            {
+                loader: 'sass-loader'
+            }
+        ]
+    },
+    {
+        test: /\.[jt]sx?/,
+        include: path.resolve(__dirname, 'src'),
+        exclude: /node_modules/,
+        use: ['swc-loader']
+    },
+    {
+        test: /\.(png|jpg|jpeg|gif|svg)$/,
+        type: 'asset/resource'
+    },
+    // Put your webpack loader rules in this array.  This is where you would put
+    // your ts-loader configuration for instance:
+    /**
+     * Typescript Example:
+     *
+     * {
+     *   test: /\.tsx?$/,
+     *   exclude: /(node_modules|.webpack)/,
+     *   loaders: [{
+     *     loader: 'ts-loader',
+     *     options: {
+     *       transpileOnly: true
+     *     }
+     *   }]
+     * }
+     */
+];
