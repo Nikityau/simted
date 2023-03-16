@@ -1,10 +1,13 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+
+import {Simted} from "../modules/simted";
 
 import './style/app.scss'
 const App = () => {
+
     return (
-        <div>
-            Hello From React
+        <div className={'simted'}>
+            <Simted/>
         </div>
     );
 };

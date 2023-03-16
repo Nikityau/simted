@@ -1,0 +1,20 @@
+{
+  "directory": [
+    {
+      "type": "file",
+      "title": "index.js",
+      "inside": null
+    },
+    {
+      "type": "folder",
+      "title": "app",
+      "inside": [
+        {
+          "type": "file",
+          "title": "index.js",
+          "inside": null
+        }
+      ]
+    }
+  ]
+}
