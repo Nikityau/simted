@@ -10,8 +10,10 @@ const FolderField = () => {
 
     return (
         <div className={'folder-field'}>
-            <div className={'folder-field__container'}>
-                <DirectoryHoc data={folderData.directory}/>
+            <div className={'folder-field__wrapper'}>
+                <div className={'folder-field__container'}>
+                    <DirectoryHoc data={folderData.directory}/>
+                </div>
             </div>
         </div>
     );

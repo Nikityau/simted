@@ -27,6 +27,7 @@
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@vercel/webpack-asset-relocator-loader": "^1.7.3",
+    "classnames": "^2.3.2",
     "css-loader": "^6.7.3",
     "electron": "23.1.4",
     "html-webpack-plugin": "^5.5.0",

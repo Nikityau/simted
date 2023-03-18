@@ -35,6 +35,37 @@ export const folderData = {
                     ]
                 }
             ]
+        },
+        {
+            "type": "folder",
+            "title": "app2",
+            "inside": [
+                {
+                    "type": "file",
+                    "title": "index.js",
+                    "inside": null
+                },
+                {
+                    "type": "folder",
+                    "title": "more",
+                    "inside": [
+                        {
+                            "type": "folder",
+                            "title": "style",
+                            "inside": [
+                                {
+                                    "type": "file",
+                                    "title": "style.css",
+                                },
+                                {
+                                    "type": "file",
+                                    "title": "global.css",
+                                },
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

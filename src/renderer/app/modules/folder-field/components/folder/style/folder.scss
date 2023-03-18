@@ -1,6 +1,42 @@
 .folder {
   cursor: pointer;
 }
+
+.folder_open {
+  .folder__status {
+    img {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.folder__info {
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 3px 0;
+
+  background-color: slateblue;
+}
+.folder__status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 6px;
+
+    opacity: .8;
+  }
+}
+.folder__status_open {
+  img {
+    transform: rotate(90deg);
+  }
+}
+
 .folder__content {
   padding-left: 20px;
 }

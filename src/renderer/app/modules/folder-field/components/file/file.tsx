@@ -1,11 +1,13 @@
 import React from 'react';
 
+import './style/file.scss'
+
 type FileProps = {
     title: string
 }
 const File = ({title}: FileProps) => {
     return (
-        <div>
+        <div className={'file'}>
             <span>{title}</span>
         </div>
     );
