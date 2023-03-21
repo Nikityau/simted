@@ -1,5 +1,7 @@
 .folder {
   cursor: pointer;
+
+    user-select: none;
 }
 
 .folder_open {
@@ -17,13 +19,13 @@
   gap: 5px;
 
   padding: 3px 0;
-
-  background-color: slateblue;
 }
 .folder__status {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  padding: 2px 5px;
 
   img {
     width: 6px;
@@ -32,6 +34,8 @@
   }
 }
 .folder__status_open {
+
+
   img {
     transform: rotate(90deg);
   }
@@ -39,4 +43,9 @@
 
 .folder__content {
   padding-left: 20px;
+
+  display: none;
+}
+.folder__content_open {
+  display: block;
 }

@@ -3,6 +3,9 @@ import React, {useEffect} from 'react';
 import {Simted} from "../modules/simted";
 
 import './style/app.scss'
+
+import '../assets/fonts/jet-brains-mono'
+
 const App = () => {
 
     return (
