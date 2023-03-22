@@ -1,0 +1,21 @@
+.file-create {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 200px;
+  height: 200px;
+
+  background-color: #2a2d3a;
+
+  border: 2px solid #2a2d3a;
+  box-shadow: inset 0px 0px 3px #000;
+
+  opacity: 0;
+  pointer-events: none;
+}
+
+.file-create_open {
+  opacity: 1;
+  pointer-events: auto;
+}

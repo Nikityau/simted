@@ -12,7 +12,7 @@ type FileProps = {
 const File = ({title}: FileProps) => {
 
     return (
-        <div className={'file'}>
+        <div className={'file'} data-file-type={'file'}>
             <div className={'file__icon'}>
                 {
                     <FileIcon

@@ -18,8 +18,6 @@ const FolderTitle = ({title}:FolderTitleProps) => {
         fc.dispatch(changeFolderState())
     }
 
-
-
     return (
         <div className={'folder__info'} onDoubleClick={onFolderClick}>
             <div className={cn(

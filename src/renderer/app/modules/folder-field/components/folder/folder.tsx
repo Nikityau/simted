@@ -29,7 +29,9 @@ const Folder = ({title, children}: FolderProps & React.PropsWithChildren) => {
             state,
             dispatch
         }}>
-            <div className={cn('folder')}>
+            <div className={cn('folder')}
+                data-file-type={'folder'}
+            >
                 <FolderTitle title={title}/>
                 <FolderContent>
                     {children}
