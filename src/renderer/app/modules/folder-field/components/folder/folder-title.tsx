@@ -15,6 +15,8 @@ const FolderTitle = ({title}:FolderTitleProps) => {
     const fc = useContext(FolderContext)
 
     const onFolderClick = () => {
+        console.log('click')
+
         fc.dispatch(changeFolderState())
     }
 

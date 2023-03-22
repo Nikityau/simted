@@ -1,32 +1,19 @@
 import React, {useEffect} from 'react';
 
 import DirectoryHoc from "./helpers/directory-hoc";
-import FileCreate from "./components/file-create/file-create";
 
 import {folderData} from './data/folder.data'
-import {useFolderFieldStore} from "./store/zustand/folder-field-store";
 
 import './style/folder-field.scss'
 
 const FolderField = () => {
 
-    const [changeFCVisibilty, changeMousePos] = useFolderFieldStore(state => [state.change, state.changeMousePos])
+    useEffect(() => {
+        console.log('rerender')
+    })
 
     const onClick = (e) => {
-        switch (e.button) {
-            case 0:
-                changeFCVisibilty(false)
-                return
-            case 2:
-                changeFCVisibilty(true)
-                changeMousePos({
-                    x: e.clientX,
-                    y: e.clientY
-                })
-                return;
-            default:
-                return;
-        }
+
     }
 
     return (
@@ -38,7 +25,6 @@ const FolderField = () => {
                     <DirectoryHoc data={folderData.directory}/>
                 </div>
             </div>
-            <FileCreate/>
         </div>
     );
 };
