@@ -11,25 +11,6 @@
   height: calc(100% - 4px);
 
   overflow: scroll;
-
-  &::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
-
-    background-color: transparent;
-  }
-
-  &::-webkit-scrollbar-track {
-
-  }
-  &::-webkit-scrollbar-thumb {
-    border-radius: 20px;
-
-    background-color: #3b3c50;
-  }
-  &::-webkit-scrollbar-corner {
-    background-color: transparent;
-  }
 }
 .folder-field__container {
   padding: 5px 10px;

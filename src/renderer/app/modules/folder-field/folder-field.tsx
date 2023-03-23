@@ -20,7 +20,7 @@ const FolderField = () => {
         <div className={'folder-field'}
              onMouseDown={onClick}
         >
-            <div className={'folder-field__wrapper'}>
+            <div className={'folder-field__wrapper scrollbar'}>
                 <div className={'folder-field__container'}>
                     <DirectoryHoc data={folderData.directory}/>
                 </div>
