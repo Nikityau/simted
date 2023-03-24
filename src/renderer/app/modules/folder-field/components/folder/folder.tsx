@@ -7,10 +7,12 @@ import {FolderAction, FolderState} from "./react-reducer/interface";
 import FolderTitle from "./folder-title";
 import FolderContent from "./folder-content";
 
+import {FolderFile} from "../../data/folder.data";
+
 import './style/folder.scss'
 
 type FolderProps = {
-    title: string,
+    folder: FolderFile
 }
 
 interface FContext {
@@ -20,7 +22,7 @@ interface FContext {
 
 export const FolderContext = React.createContext<FContext>(null)
 
-const Folder = ({title, children}: FolderProps & React.PropsWithChildren) => {
+const Folder = ({folder, children}: FolderProps & React.PropsWithChildren) => {
 
     const [state, dispatch] = useReducer(folderReducer, { isFolderOpen: false })
 
@@ -32,7 +34,7 @@ const Folder = ({title, children}: FolderProps & React.PropsWithChildren) => {
             <div className={cn('folder')}
                 data-file-type={'folder'}
             >
-                <FolderTitle title={title}/>
+                <FolderTitle title={folder.name}/>
                 <FolderContent>
                     {children}
                 </FolderContent>

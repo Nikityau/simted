@@ -1,27 +1,34 @@
 import React from 'react';
+import {useDispatch} from "react-redux";
 
-import FileIcon from "./file-icon";
 import {getIcon} from "../../helpers/get-icon";
+import {addFileAction} from "../../../code-field";
+
+import Icon from "../../../../ui/components/icon/icon";
+
+import {FolderFile} from "../../data/folder.data";
 
 import './style/file.scss'
 
 type FileProps = {
-    title: string
+    file: FolderFile
 }
 
-const File = ({title}: FileProps) => {
+const File = ({file}: FileProps) => {
+
+    const dispatch = useDispatch()
+
+    const onFileOpen = () => {
+        dispatch(addFileAction(file))
+    }
 
     return (
-        <div className={'file'} data-file-type={'file'}>
+        <div className={'file'} data-file-type={'file'} onDoubleClick={onFileOpen}>
             <div className={'file__icon'}>
-                {
-                    <FileIcon
-                        icon={getIcon(title)}
-                    />
-                }
+                <Icon icon={getIcon(file)}/>
             </div>
             <div className={'file__name'}>
-                <span>{title}</span>
+                <span>{file.name}</span>
             </div>
         </div>
     );

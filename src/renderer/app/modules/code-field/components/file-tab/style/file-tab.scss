@@ -1,0 +1,33 @@
+.file-tab {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+
+  padding: 7px 5px;
+
+  cursor: pointer;
+
+  background: transparent;
+
+  border-bottom: 2px solid transparent;
+}
+
+.file-tab_current {
+  background: #3b3c50;
+  border-color: #182742;
+}
+
+.file-tab__icon {
+  width: 10px;
+  height: 100%;
+}
+
+.file-tab__name,
+.file-tab__close {
+  font-family: "JetBrains Mono";
+  font-weight: 400;
+  line-height: 1.2;
+  font-size: 10px;
+
+  color: #B6C4F2;
+}

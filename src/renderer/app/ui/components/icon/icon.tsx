@@ -1,11 +1,11 @@
 import React from 'react';
 import {SimpleIcon} from "simple-icons";
 
-type FileIconProps = {
+type IconProps = {
     icon: SimpleIcon
 }
 
-const FileIcon = ({icon}:FileIconProps) => {
+const Icon = ({icon}:IconProps) => {
     return (
         <svg
             role={'img'}
@@ -13,7 +13,7 @@ const FileIcon = ({icon}:FileIconProps) => {
             xmlns="http://www.w3.org/2000/svg"
             fill={`#${icon.hex}`}
         >
-            <title>{ icon.title }</title>
+            <title>{icon.title}</title>
             <path
                 d={icon.path}
             />
@@ -21,4 +21,4 @@ const FileIcon = ({icon}:FileIconProps) => {
     );
 };
 
-export default FileIcon;
+export default Icon;
